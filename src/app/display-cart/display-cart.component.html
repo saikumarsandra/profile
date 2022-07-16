@@ -1,0 +1,54 @@
+
+<div class="col-md-6 container">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>cartId</th>
+    
+      <th>itemId</th>
+      <th>noOfItems</th>
+      <th>price</th>
+      <th>itemName</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+       
+           
+             
+        <tr *ngFor="let data of cart">
+            <td>{{data.cartId}}</td>
+         
+            <td>{{data.itemId}}</td>
+         
+
+
+
+
+            <td>
+                
+               <button type="button" class="btn btn-success" (click)="increase(data)" >+</button>
+    
+                {{data.noOfItems}}
+               <button type="button" class="btn btn-success" (click)="decrease(data)" >-</button>
+            </td>
+            <td> {{data.price}}</td>
+            <td>{{data.itemName}}</td>
+            <td>
+              
+              <button type="button" class="btn btn-warning" (click)="delete(data.cartId)" >Delete</button>
+          </td>
+
+            </tr>
+    </tbody>
+      </table>
+  
+
+      <div *ngIf="cart?.length > 0; else empty">
+            <button routerLink="/homepage" class="btn btn-primary"> <h5 style="display: inline;">BackTOShop</h5> </button> 
+        <button (click)="checkout()" class="btn btn-primary float-right">Checkout</button>
+    </div>
+    <ng-template #empty>
+      <h4 class="text-muted text-center">Cart is empty. Go  get something! :)</h4>
+  </ng-template>
+    </div>

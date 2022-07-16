@@ -1,0 +1,77 @@
+
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <h1 class="my-4">{{item.itemName}}
+      <small></small>
+    </h1>
+  
+    <!-- Portfolio Item Row -->
+    <div class="row">
+  
+      <div class="col-md-8">
+      
+       <div class="container ">
+   <div id="demo" class="carousel slide" data-ride="carousel">
+  
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/uniquecart.png" style="width: 400px;;  height:200px"  alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/uniquecart.png" style="width: 500px;;  height:200px" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/uniquecart.png" style="width: 500px;;  height:200px"  alt="">
+      </div>
+    </div>
+  
+    <!-- Left and right conliols -->
+    <a class="carousel-conliol-prev" href="#demo" data-slide="prev">
+      <span class="carousel-conliol-prev-icon"></span>
+    </a>
+    <a class="carousel-conliol-next" href="#demo" data-slide="next">
+      <span class="carousel-conliol-next-icon"></span>
+    </a>
+  
+  </div>
+  </div>
+      </div>
+  
+      <div class="col-md-4" *ngIf="item" >
+       
+   
+    <ul *ngIf="item">
+      <li>
+        
+        <h4 class="my-3">Description</h4>
+        <p> {{item.itemDescription}}</p>
+      
+      </li>
+      <li>
+        <h4 class="my-3">Product Details</h4>
+      <br>
+       <li> Name :   {{item.itemName}}</li>
+       <li> Model:   {{item.model}}   </li>
+      <li>  Price:   {{item.itemCost}}</li>
+       <li> Stock: {{item.stock}}</li>
+
+
+     
+    </ul> 
+    <h3 ><a class="nav-link btn btn-info" (click)="insertintocart()">AddToCart</a></h3>
+    <h3 ><a class="nav-link btn btn-info" (click)="checkout()">BuyProduct</a></h3>
+       
+      </div>
+  
+    </div>
+    </div>
+     

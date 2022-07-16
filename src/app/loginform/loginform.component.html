@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+  <body background="https://images.pexels.com/photos/949132/pexels-photo-949132.jpeg?auto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D3%26h%3D750%26w%3D1260">
+
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Sign In</h5>
+
+
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" name="username" class="form-control mb-4" [(ngModel)]="username" placeholder="User Name" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="text" name="password" class="form-control mb-4" [(ngModel)]="password" placeholder="Password" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <button type="submit" class="btn btn-primary my-4" (click)="login()">login</button>
+    <p>Not a member?
+      <a routerLink="/signup" routerLinkActive="active">Register</a>
+    </p>
+  </form>
+  
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+  </body>
+</html>

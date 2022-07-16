@@ -1,0 +1,33 @@
+
+
+<div class="card-columns">
+    <div class="row">
+      <div class="col-sm-10">
+  <ul  *ngFor="let product of item">
+     
+      <div class="card bg-light">
+        <div class="card-body ">
+       
+      <table>
+        <img  class="card-img-top" src="assets/images/uniquecart.png " alt="LOGO" height="170" style="width:100%">    
+  
+    <tr>ItemName        :        {{product.itemName}}</tr>
+    <tr>Manfacture      :      {{product.manufacturer}}</tr>
+    <tr>itemDescription : {{product.itemDescription}}</tr>
+    <tr>Model           :           {{product.model}}</tr>
+    <tr>Quantity        :        {{product.quantity}}</tr>
+    <tr>Price           :           {{product.itemCost}}</tr>
+    <tr>Stock           :           {{product.stock}}</tr>
+
+</table>
+<button (click)="ProductDetails(product.itemid)" class="btn btn-info" style="margin-left: 10px">ViewFullDetails</button>
+
+
+      
+    </div>
+    
+      </div>
+   </ul>
+  </div>
+  </div>
+  </div>

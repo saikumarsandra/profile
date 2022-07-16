@@ -1,0 +1,15 @@
+<br/>
+
+<table>
+    <img src="assets/images/uniquecart.png" alt="LOGO" height="170" width="170">    
+<tr>ItemName        :           {{item.itemName}}</tr>
+<tr>Manfacture      :           {{item.manufacturer}}</tr>
+<tr>itemDescription :           {{item.itemDescription}}</tr>
+<tr>Model           :           {{item.model}}</tr>
+<tr>Quantity        :           {{item.quantity}}</tr>
+<tr>Price           :           {{item.itemCost}}</tr>
+<tr>Stock           :           {{item.stock}}</tr>
+</table>
+
+<br/>
+<button type="=button" class="btn btn-success" (click)="onSave()"  (click)="reload()" >AddCart</button>

@@ -1,0 +1,57 @@
+
+<h1   class="text-center">Transaction</h1>
+<div style="width:40%; margin: 25px auto" >
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="categoryid">PaymentType</label>
+        <select class="custom-select custom-select-lg "  id="transactionType" name="transactionType"
+                [(ngModel)]="transaction.transactionType"
+                required>
+            <option>debitcard</option>
+            <option>creditcard</option>
+            <option>Netbanking</option>
+            <option>creditcard</option>
+           
+        </select>
+    </div>
+    <div class="form-group">
+      
+       
+         
+          </div>
+    <div class="form-group">
+        <button type="submit" [disabled]="!form.form.valid" class="btn btn-lg btn-info btn-block">Proceed Transaction</button>
+    </div>
+</form>
+
+
+
+
+
+    <div class="col-md-6 container">
+        <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>transactionId</th>
+          <th>transactionType</th>
+          <th>totalamount</th>
+          <th>orderId</th> 
+   
+        
+          
+          </tr>
+        </thead>
+        <tbody>
+           
+    <tr>
+            <td>       {{transaction.transactionId}}</td>
+        <td>       {{transaction.transactionType}}</td>
+        <td>     {{ transaction.totalamount}}</td>
+        <td>{{transaction.orderId}}</td>
+       
+       
+    </tr>
+        </tbody>
+    </table>
+</div>
+

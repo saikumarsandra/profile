@@ -1,0 +1,30 @@
+<div class="container mt-5">
+     
+        <div class="col-sm-9 pl-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Transaction ID</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feed of feeds">
+                        <td>
+                            {{feed.itemName}}
+                        </td>
+                        <td>
+                            {{feed.numberOfItems}}
+                        </td>
+                        <td>
+                           
+                            {{feed.price}}
+                        </td>
+                        <td>
+                            {{feed.orderId}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
